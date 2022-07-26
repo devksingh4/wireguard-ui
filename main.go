@@ -29,7 +29,7 @@ var (
 	flagBindAddress    string = "0.0.0.0:5000"
 	flagSmtpHostname   string = "127.0.0.1"
 	flagSmtpPort       int    = 25
-	flagSmtpTLS	       int    = true
+	flagSmtpTLS	       bool    = true
 	flagSmtpUsername   string
 	flagSmtpPassword   string
 	flagSmtpAuthType   string = "None"
