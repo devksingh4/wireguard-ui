@@ -19,10 +19,10 @@ import (
 	"golang.zx2c4.com/wireguard/wgctrl"
 	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 
-	"github.com/ngoduykhanh/wireguard-ui/emailer"
-	"github.com/ngoduykhanh/wireguard-ui/model"
-	"github.com/ngoduykhanh/wireguard-ui/store"
-	"github.com/ngoduykhanh/wireguard-ui/util"
+	"github.com/devksingh4/wireguard-ui/emailer"
+	"github.com/devksingh4/wireguard-ui/model"
+	"github.com/devksingh4/wireguard-ui/store"
+	"github.com/devksingh4/wireguard-ui/util"
 )
 
 // Health check handler

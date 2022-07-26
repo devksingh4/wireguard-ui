@@ -1,4 +1,4 @@
-![](https://github.com/ngoduykhanh/wireguard-ui/workflows/wireguard-ui%20build%20release/badge.svg)
+![](https://github.com/devksingh4/wireguard-ui/workflows/wireguard-ui%20build%20release/badge.svg)
 
 # wireguard-ui
 
@@ -24,7 +24,7 @@ Download the binary file from the release and run it with command:
 
 ### Using docker compose
 
-You can take a look at this example of [docker-compose.yml](https://github.com/ngoduykhanh/wireguard-ui/blob/master/docker-compose.yaml). Please adjust volume mount points to work with your setup. Then run it like below:
+You can take a look at this example of [docker-compose.yml](https://github.com/devksingh4/wireguard-ui/blob/master/docker-compose.yaml). Please adjust volume mount points to work with your setup. Then run it like below:
 
 ```
 docker-compose up
@@ -203,7 +203,7 @@ rice append --exec wireguard-ui
 ![wireguard-ui 0.3.7](https://user-images.githubusercontent.com/37958026/177041280-e3e7ca16-d4cf-4e95-9920-68af15e780dd.png)
 
 ## License
-MIT. See [LICENSE](https://github.com/ngoduykhanh/wireguard-ui/blob/master/LICENSE).
+MIT. See [LICENSE](https://github.com/devksingh4/wireguard-ui/blob/master/LICENSE).
 
 ## Support
 If you like the project and want to support it, you can *buy me a coffee* ☕
