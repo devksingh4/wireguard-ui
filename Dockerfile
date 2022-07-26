@@ -1,6 +1,6 @@
 # Build stage
 FROM golang:1.17-alpine3.16 as builder
-LABEL maintainer="Khanh Ngo <k@ndk.name"
+LABEL maintainer="Dev Singh <dev@devksingh.com>"
 
 ARG TARGETOS=linux
 ARG TARGETARCH=amd64

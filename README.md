@@ -92,7 +92,8 @@ EMAIL_FROM_NAME: the sender's email address
 
 ```
 SMTP_HOSTNAME: The SMTP ip address or hostname
-SMTP_PORT: the SMTP port
+SMTP_PORT: the SMTP port (usually 587 for STARTTLS or TLS)
+SMTP_TLS: whether to use SSL/TLS (true) or STARTTLS (false)
 SMTP_USERNAME: the SMTP username to authenticate
 SMTP_PASSWORD: the SMTP user password
 SMTP_AUTH_TYPE: the authentication type. Possible values: PLAIN, LOGIN, NONE
