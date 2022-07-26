@@ -43,11 +43,12 @@ var (
 )
 
 const (
-	defaultEmailSubject = "Your wireguard configuration"
-	defaultEmailContent = `Hi,</br>
-<p>In this email you can find your personal configuration for our wireguard server.</p>
+	defaultEmailSubject = "Your SinghCorp VPN configuration"
+	defaultEmailContent = `Hello valued customer,</br>
+<p>In this email you can find your personal configuration for our VPN server. Import this configuration into your WireGuard client.</p>
 
-<p>Best</p>
+<p>Best Regards,</p>
+<p>SinghCorp Admin </p>
 `
 )
 
