@@ -59,7 +59,7 @@ func (o *SmtpMail) Send(toName string, to string, subject string, content string
 		server.TLSConfig = &tls.Config{InsecureSkipVerify: true}
 	}
 
-	if o.SmtpTLS {
+	if o.tls {
 		server.Encryption = mail.EncryptionSSLTLS
 	} else {
 		server.Encryption = mail.EncryptionSTARTTLS
