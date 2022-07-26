@@ -8,6 +8,7 @@ var (
 	BindAddress    string
 	SmtpHostname   string
 	SmtpPort       int
+	SmtpTLS		   bool
 	SmtpUsername   string
 	SmtpPassword   string
 	SmtpNoTLSCheck bool

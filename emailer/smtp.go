@@ -11,6 +11,7 @@ import (
 type SmtpMail struct {
 	hostname   string
 	port       int
+	tls        bool
 	username   string
 	password   string
 	authType   mail.AuthType
@@ -30,8 +31,8 @@ func authType(authType string) mail.AuthType {
 	}
 }
 
-func NewSmtpMail(hostname string, port int, username string, password string, noTLSCheck bool, auth string, fromName, from string) *SmtpMail {
-	ans := SmtpMail{hostname: hostname, port: port, username: username, password: password, noTLSCheck: noTLSCheck, fromName: fromName, from: from, authType: authType(auth)}
+func NewSmtpMail(hostname string, port int, tls bool, username string, password string, noTLSCheck bool, auth string, fromName, from string) *SmtpMail {
+	ans := SmtpMail{hostname: hostname, port: port, tls: tls, username: username, password: password, noTLSCheck: noTLSCheck, fromName: fromName, from: from, authType: authType(auth)}
 	return &ans
 }
 
@@ -50,13 +51,18 @@ func (o *SmtpMail) Send(toName string, to string, subject string, content string
 	server.Authentication = o.authType
 	server.Username = o.username
 	server.Password = o.password
-	server.Encryption = mail.EncryptionSTARTTLS
 	server.KeepAlive = false
 	server.ConnectTimeout = 10 * time.Second
 	server.SendTimeout = 10 * time.Second
 
 	if o.noTLSCheck {
 		server.TLSConfig = &tls.Config{InsecureSkipVerify: true}
+	}
+
+	if o.SmtpTLS {
+		server.Encryption = mail.EncryptionSSLTLS
+	} else {
+		server.Encryption = mail.EncryptionSTARTTLS
 	}
 
 	smtpClient, err := server.Connect()
